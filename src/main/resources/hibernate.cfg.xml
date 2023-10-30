@@ -1,0 +1,28 @@
+ <!DOCTYPE hibernate-configuration PUBLIC
+         "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/airafrika</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">123456</property>
+        <!-- Other Hibernate settings -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Entity classes -->
+        <mapping class="com.airafrika.entities.Passenger" />
+        <mapping class="com.airafrika.entities.Airline" />
+        <mapping class="com.airafrika.entities.Flight" />
+        <mapping class="com.airafrika.entities.Stopover" />
+        <mapping class="com.airafrika.entities.Extras" />
+        <mapping class="com.airafrika.entities.Reservation" />
+        <mapping class="com.airafrika.entities.Payment" />
+        <mapping class="com.airafrika.entities.Admin" />
+        <mapping class="com.airafrika.entities.ReservationExtras"/>
+
+
+    </session-factory>
+</hibernate-configuration>
